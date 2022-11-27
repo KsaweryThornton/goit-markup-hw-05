@@ -30,6 +30,8 @@ body {
 
 .contact-information {
   fill: var(--second-important-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-information:hover {
@@ -37,6 +39,9 @@ body {
   fill: var(--brand-color);
 }
 
+.interactive-elements {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .interactive-elements:hover {
   color: var(--brand-color);
 }
@@ -92,6 +97,8 @@ button {
   border-radius: 4px;
   border: none;
   margin-bottom: 200px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first-section-button:hover {
@@ -140,6 +147,9 @@ button {
   border: none;
   border-radius: 4px;
   height: 38px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-buttons:hover {
@@ -291,6 +301,8 @@ ul {
   align-items: center;
   border-radius: 50%;
   fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-box:hover {
@@ -382,6 +394,7 @@ footer {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
   fill: var(--third-important-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon-box:hover {
@@ -458,6 +471,48 @@ figcaption {
   border-bottom: 1px solid #e5e5e5;
   margin: 0;
   width: calc((100% - 60px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blue-onlay-parent {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 294px;
+  width: 100%;
+}
+
+.blue-onlay {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 149, 243, 0.9);
+  z-index: 2;
+  transform: translateY(110%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blue-onlay-parent:hover .blue-onlay {
+  transform: translateY(0);
+}
+
+.blue-onlay-pharagraph {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--third-important-color);
+  margin-block: 49px;
+  width: 301px;
+  height: 196px;
+  padding: 0;
+  margin-left: 24px;
 }
 
 .portfolio-items:hover {
@@ -480,6 +535,8 @@ figcaption {
   align-items: center;
   margin: 0;
   padding: 0;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon:hover {
@@ -507,4 +564,59 @@ figcaption {
   padding-inline: 215px;
   margin-bottom: 94px;
   justify-content: space-between;
+}
+
+.our-tasks-box {
+  position: relative;
+}
+
+.our-tasks {
+  position: absolute;
+  top: 224px;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  z-index: 1;
+}
+
+.our-tasks-pharagraph {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-important-color);
+  margin: 0;
+  padding-block: 27px;
+}
+
+.menu-first-item {
+  position: relative;
+}
+.menu-first-item::after {
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 4px;
+  left: 0;
+  top: 44.5px;
+  background: var(--brand-color);
+  border-radius: 2px;
+}
+
+.menu-second-item {
+  position: relative;
+}
+.menu-second-item::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 4px;
+  left: 0;
+  top: 44.5px;
+  background: var(--brand-color);
+  border-radius: 2px;
 }
